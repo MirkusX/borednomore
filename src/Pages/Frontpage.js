@@ -1,19 +1,20 @@
 import { useContext } from "react";
-import { getData } from "../App";
 import { DataContext } from "../Components/Context";
+import { StyledDiv, StyledH1 } from "../Components/StyledComponents";
 
 export const Frontpage = () => {
   const { data, setData } = useContext(DataContext);
 
   return (
     <section>
-      <div>
-        <h1>{data.activity}</h1>
+      <StyledDiv>
+        <StyledH1>{data.activity}</StyledH1>
         <p>How many is needed: {data.participants}</p>
-        <p>Cost (in $): {data.price}</p>
-        <p>Difficulty: {data.accessibility}</p>
-        <p>What kind of activity it is: {data.type}</p>
-      </div>
+        <p>Cost: {data.price * 10}/10</p>
+        <p>Difficulty: {data.accessibility * 10}/10</p>
+        <p>What kind of activity it is: {data.type.toUpperCase()}</p>
+        <button>ROLL NEW ACTIVITY</button>
+      </StyledDiv>
     </section>
   );
 };
