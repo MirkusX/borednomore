@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { Frontpage } from "./Pages/Frontpage";
 import axios from "axios";
+import { DataContext } from "./Components/Context";
 
 function App() {
   const [data, setData] = useState();
@@ -16,15 +17,18 @@ function App() {
         setError(response);
       });
   };
-  console.log(data);
   useEffect(() => {
     getData();
   }, []);
-  return (
-    <div className="App">
-      <Frontpage />
-    </div>
-  );
+  if (data) {
+    return (
+      <DataContext.Provider value={{ data, setData }}>
+        <div className="App">
+          <Frontpage />
+        </div>
+      </DataContext.Provider>
+    );
+  }
 }
 
 export default App;
