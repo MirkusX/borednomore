@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import { Frontpage } from "./Pages/Frontpage";
+import axios from "axios";
 
 function App() {
+  const [data, setData] = useState();
+  const [error, setError] = useState();
+  const getData = () => {
+    axios
+      .get("https://www.boredapi.com/api/activity/")
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((response) => {
+        setError(response);
+      });
+  };
+  console.log(data);
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Frontpage />
     </div>
   );
 }
