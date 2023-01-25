@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Frontpage } from "./Pages/Frontpage";
-import axios from "axios";
 import { DataContext } from "./Components/Context";
+import axios from "axios";
+import { StyledButton } from "./Components/StyledComponents";
 
 function App() {
   const [data, setData] = useState();
@@ -25,6 +26,9 @@ function App() {
       <DataContext.Provider value={{ data, setData }}>
         <div className="App">
           <Frontpage />
+          <StyledButton onClick={() => getData()}>
+            Roll new activity
+          </StyledButton>
         </div>
       </DataContext.Provider>
     );

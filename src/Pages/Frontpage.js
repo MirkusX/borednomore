@@ -13,7 +13,6 @@ export const Frontpage = () => {
         <p>Cost: {data.price * 10}/10</p>
         <p>Difficulty: {data.accessibility * 10}/10</p>
         <p>What kind of activity it is: {data.type.toUpperCase()}</p>
-        <button>ROLL NEW ACTIVITY</button>
       </StyledDiv>
     </section>
   );
