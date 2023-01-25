@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/borednomore/static/css/main.f1b084a6.css",
+    "main.js": "/borednomore/static/js/main.abca3101.js",
+    "static/js/787.7f2d7b58.chunk.js": "/borednomore/static/js/787.7f2d7b58.chunk.js",
+    "index.html": "/borednomore/index.html",
+    "main.f1b084a6.css.map": "/borednomore/static/css/main.f1b084a6.css.map",
+    "main.abca3101.js.map": "/borednomore/static/js/main.abca3101.js.map",
+    "787.7f2d7b58.chunk.js.map": "/borednomore/static/js/787.7f2d7b58.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1b084a6.css",
+    "static/js/main.abca3101.js"
+  ]
+}
