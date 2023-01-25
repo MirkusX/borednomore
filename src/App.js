@@ -6,8 +6,11 @@ import axios from "axios";
 import { StyledButton } from "./Components/StyledComponents";
 
 function App() {
+  //usestate for data
   const [data, setData] = useState();
+  //usestate for error
   const [error, setError] = useState();
+  //api call
   const getData = () => {
     axios
       .get("https://www.boredapi.com/api/activity/")
@@ -18,6 +21,7 @@ function App() {
         setError(response);
       });
   };
+  //gets api on entering page and refresh
   useEffect(() => {
     getData();
   }, []);

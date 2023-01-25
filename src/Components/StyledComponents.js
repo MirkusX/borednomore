@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+//stylings
+
 export const StyledH1 = styled.h1`
   margin-top: 0;
 `;

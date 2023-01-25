@@ -3,7 +3,8 @@ import { DataContext } from "../Components/Context";
 import { StyledDiv, StyledH1 } from "../Components/StyledComponents";
 
 export const Frontpage = () => {
-  const { data, setData } = useContext(DataContext);
+  //usecontext for data api
+  const { data } = useContext(DataContext);
 
   return (
     <section>
