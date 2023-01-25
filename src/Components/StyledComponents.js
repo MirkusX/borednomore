@@ -18,6 +18,8 @@ export const StyledButton = styled.button`
   border-radius: 0 0 5px 5px;
   cursor: pointer;
   padding: 1em;
+  color: inherit;
+  font-family: inherit;
   &:hover {
     background-color: #49393b;
   }

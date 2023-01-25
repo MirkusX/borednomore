@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 .App {
   text-align: center;
   background-color: #adfcf9;
   min-height: 100vh;
+  color: #341c1c;
+  font-family: "Lato", sans-serif;
 }
 
 .App-logo {
